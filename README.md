@@ -1,6 +1,6 @@
 ### Installation
 
-Default location is `usr/local`
+Default location is `usr/local`. Requires `xlib` header files.
 
 ```bash
 git clone https://github.com/lukahietala/st
