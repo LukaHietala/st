@@ -179,7 +179,12 @@ static MouseShortcut mshortcuts[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
-static char *copyoutput[] = { "/bin/sh", "-c", "copyout", "externalpipe", NULL };
+/* 
+ * Scripts that I use
+ * https://github.com/lukahietala/scripts
+ * */
+
+static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NULL };
 static char *copyurls[] = {"/bin/sh", "-c", "st-copyurls", "externalpipe", NULL};
 
 static Shortcut shortcuts[] = {
@@ -198,8 +203,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
     { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ TERMMOD,				XK_O,	  externalpipe, {.v = copyoutput} },
-	{ TERMMOD, XK_U, externalpipe, { .v = copyurls } },
+	{ TERMMOD,				XK_O,	        externalpipe, {.v = copyoutput} },
+	{ TERMMOD,              XK_U,           externalpipe, { .v = copyurls } },
 };
 
 /*
